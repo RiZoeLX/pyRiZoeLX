@@ -11,4 +11,3 @@ spam_counts = '99'
 start_spam(Client, spam_counts, spam_text)
 ```
 
-<h3> © [RiZoeL X](t.me/RiZoeLX) </h3>
