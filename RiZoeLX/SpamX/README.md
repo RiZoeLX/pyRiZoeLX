@@ -6,7 +6,7 @@ from pyrogram import Client
 
 Client = Client('my_account')
 spam_text = 'Hello!'
-spam_counts = '99'
+spam_counts = 99
 
 start_spam(Client, spam_counts, spam_text)
 ```
