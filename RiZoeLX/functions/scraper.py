@@ -1,6 +1,6 @@
 """"
    © RiZoeLX
-""""
+"""
 
 from . import delete_reply
 import asyncio
@@ -29,7 +29,7 @@ async def srape(RiZoeL, message, to_grp, from_grp):
    except Exception as err:
      await delete_reply(message, x, str(err))
      return
-   print(f"[INFO]: joined {add_group.title} to add users")
+   print(f"pyRiZoeLX [INFO]: joined {add_group.title} to add users")
 
    a = 0
    b = 0
