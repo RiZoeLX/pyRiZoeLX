@@ -47,7 +47,7 @@ async def promote_user(RiZoeL, message):
     else:
       admin_tag = random.choice(admin_tags)
   try:
-     await SpamX.promote_chat_member(chat.id, user.id,
+     await RiZoeL.promote_chat_member(chat.id, user.id,
             can_change_info=False,
             can_post_messages=True,
             can_edit_messages=True,
@@ -66,7 +66,7 @@ async def promote_user(RiZoeL, message):
   chat = message.chat.id
   user = await user_only(RiZoeL, message)
   try:
-     await SpamX.promote_chat_member(chat.id, user.id,
+     await RiZoeL.promote_chat_member(chat.id, user.id,
             is_anonymous=False,
             can_change_info=False,
             can_post_messages=False,
