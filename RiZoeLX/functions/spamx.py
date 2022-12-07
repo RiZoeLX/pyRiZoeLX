@@ -231,26 +231,23 @@ async def start_gdemote(RiZoeL, message, user):
          
 
 async def start_banall(RiZoeL, message):
-   try:
-      chat = message.chat
-      x = RiZoeL.send_message("Hey it's SpamX!")
-      done = 0
-      failed = 0
-      async for u in RiZoeL.get_chat_members(chat.id):
-         user = u.user
-         try:
-           await RiZoeL.ban_chat_member(chat.id, user.id)
-           done += 1
-         except Exception as err:
-           print(f"pyRiZoeLX - [INFO]: {str(err)}")
-           failed += 1
+   chat = message.chat
+   x = RiZoeL.send_message("Hey it's SpamX!")
+   done = 0
+   failed = 0
+   async for u in RiZoeL.get_chat_members(chat.id):
+      user = u.user
       try:
-         await x.edit_text(f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
-      except:
-          await x.delete()
-          await RiZoeL.send_message(chat.id, f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
-   except Exception as error:
-      await message.reply_text(str(error))
+         await RiZoeL.ban_chat_member(chat.id, user.id)
+         done += 1
+      except Exception as err:
+         print(f"pyRiZoeLX - [INFO]: {str(err)}")
+         failed += 1
+   try:
+      await x.edit_text(f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
+   except:
+      await x.delete()
+      await RiZoeL.send_message(chat.id, f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
 
 
 def start_spamX(RiZoeLX, type):
