@@ -169,9 +169,9 @@ async def start_gban(RiZoeL, message, user):
          except:
            fuck += 1
        if len(done) > 0:
-         await delete_reply(message, x, (f"User Ungbanned ✓ \n\n User: {user.mention} \n Unbanned in `{done}` chats \n Failed in `{fuck}` chats")
+         await delete_reply(message, x, f"User Ungbanned ✓ \n\n User: {user.mention} \n Unbanned in `{done}` chats \n Failed in `{fuck}` chats")
        else:
-          await delete_reply(message, x, f"user {user.mention} added in UNGBAN list!")
+         await delete_reply(message, x, f"user {user.mention} added in UNGBAN list!")
 
     except Exception as a:
       await message.reply_text(str(a))
@@ -225,7 +225,7 @@ async def start_gdemote(RiZoeL, message, user):
       except:
          fuck += 1
    if len(done) > 0:
-      await delete_reply(message, x, (f"User Globally demoted ✓ \n\n User: {user.mention} \n total common chats: `{chat_len}` \n Promoted in `{done}` chats \n Failed in `{fuck}` chats")
+      await delete_reply(message, x, f"User Globally demoted ✓ \n\n User: {user.mention} \n total common chats: `{chat_len}` \n Promoted in `{done}` chats \n Failed in `{fuck}` chats")
    else:
       await delete_reply(message, x, "I don't have sufficient rights!!")
          
@@ -242,7 +242,7 @@ async def start_banall(RiZoeL, message):
            await RiZoeL.ban_chat_member(chat.id, user.id)
            done += 1
          except Exception as err:
-           print(f"[SpamX INFO]: {str(err)}")
+           print(f"pyRiZoeLX - [INFO]: {str(err)}")
            failed += 1
       try:
          await x.edit_text(f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
@@ -258,10 +258,10 @@ def start_spamX(RiZoeLX, type):
       try:
          RiZoeLX.start()
          x = RiZoeLX.get_me()
-         print(f"[SpamX INFO]: @{x.username} started ✓")
+         print(f"pyRiZoeLX - [INFO]: @{x.username} started ✓")
       except:
          RiZoeLX.start()
-         print(f"[SpamX INFO]: Bot started ✓")
+         print(f"pyRiZoeLX - [INFO]: Bot started ✓")
     else:
       try:
          RiZoeLX.start()
@@ -271,7 +271,7 @@ def start_spamX(RiZoeLX, type):
          except:
            pass
          x = RiZoeLX.get_me()
-         print(f"[SpamX INFO]: @{x.first_name} started ✓")
+         print(f"pyRiZoeLX - [INFO]: @{x.first_name} started ✓")
       except:
          RiZoeLX.start()
          try:
@@ -279,4 +279,4 @@ def start_spamX(RiZoeLX, type):
            RiZoeLX.join_chat("DNHxHELL")
          except:
            pass
-         print(f"[SpamX INFO]: Bot started ✓")
+         print(f"pyRiZoeLX - [INFO]: Client started ✓")
