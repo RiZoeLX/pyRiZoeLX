@@ -136,13 +136,8 @@ async def start_gban(RiZoeL, message, user, reason):
        done = 0
        fuck = 0
        if not common:
-         try:
-           await x.edit_text(f"User {user.mention} got no common chats with the specified one.")
-           return
-         except:
-           await x.delete()
-           await message.reply_text(f"User {user.mention} got no common chats with the specified one.")
-           return
+          await delete_reply(message, x, f"User {user.mention} got no common chats with the specified one.")
+          return
        for cht in common:  
          try:
            await RiZoeL.ban_chat_member(cht.id, user.id)
@@ -150,17 +145,10 @@ async def start_gban(RiZoeL, message, user, reason):
          except:
            fuck += 1
        if len(done) > 0:
-          try:
-             await x.edit_text(f"User Gbanned ✓ \n\n User: {user.mention} \n Reason: {reason} \n Banned in `{done}` chats \n Failed in `{fuck}` chats")
-          except:
-             await x.delete()
-             await message.reply_text(f"User Gbanned ✓ \n\n User: {user.mention} \n Banned in `{done}` chats \n Failed in `{fuck}` chats")
+          await delete_reply(message, x, f"User Gbanned ✓ \n\n User: {user.mention} \n Banned in `{done}` chats \n Failed in `{fuck}` chats")
        else:
-          try:
-            await x.edit_text(f"user {user.mention} added in GBAN list!")
-          except:
-            await x.delete()
-            await message.reply_text(f"user {user.mention} added in GBAN list!")
+          await delete_reply(message, x, f"user {user.mention} added in GBAN list!")
+
     except Exception as a:
       await message.reply_text(str(a))
       pass
@@ -184,6 +172,7 @@ async def start_gban(RiZoeL, message, user):
          await delete_reply(message, x, (f"User Ungbanned ✓ \n\n User: {user.mention} \n Unbanned in `{done}` chats \n Failed in `{fuck}` chats")
        else:
           await delete_reply(message, x, f"user {user.mention} added in UNGBAN list!")
+
     except Exception as a:
       await message.reply_text(str(a))
       pass
