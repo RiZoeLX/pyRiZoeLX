@@ -15,4 +15,4 @@ async def ban_(client, message):
 
 <h3 align="center"> Functions available! </h3>
 
-• <code> get_user() </code>  For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/resources/USAGE.md#-functions-info-and-usage-)
+* <code> get_user() </code> For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/resources/USAGE.md#-functions-info-and-usage-)
