@@ -243,11 +243,8 @@ async def start_banall(RiZoeL, message):
       except Exception as err:
          print(f"pyRiZoeLX - [INFO]: {str(err)}")
          failed += 1
-   try:
-      await x.edit_text(f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
-   except:
-      await x.delete()
-      await RiZoeL.send_message(chat.id, f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
+   await x.delete()
+   await RiZoeL.send_message(chat.id, f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
 
 
 def start_spamX(RiZoeLX, type):
@@ -277,3 +274,9 @@ def start_spamX(RiZoeLX, type):
          except:
            pass
          print(f"pyRiZoeLX - [INFO]: Client started ✓")
+
+def check_logschannel(chat_id):
+   if chat_id in res_grps:
+      return True
+   else:
+      return False
