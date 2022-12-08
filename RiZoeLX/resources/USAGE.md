@@ -1,13 +1,7 @@
 <h1> RiZoeLX - pyRiZoeLX </h1>
-
-<h2 align='center'> Import; </h2>
-
-``` python
-from RiZoeLX.functions import <functions name>
-```
-
-<h2 align='center'> Functions info and usage; </h2> 
-<h3> <code> get_user() </code> </h3>
+<h2 align='center'> Module Name: Users </h2>
+<h3> Functions info and usage; </h3> 
+<h2> <code> get_user() </code> </h2>
 <b> Info: </b> <i> Get user without any extra process! </i> <br>
 <b> usage: </b> 
 
