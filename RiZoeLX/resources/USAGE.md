@@ -1,6 +1,6 @@
 <h1> RiZoeLX - pyRiZoeLX </h1>
 <h2 align='center'> Module Name: Users </h2>
-<h3> Functions info and usage; </h3> 
+<b align='center'> Functions info and usage! </b> 
 <h2> <code> get_user() </code> </h2>
 <b> Info: </b> <i> Get user without any extra process! </i> <br>
 <b> usage: </b> 
