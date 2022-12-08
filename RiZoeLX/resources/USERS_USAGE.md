@@ -15,3 +15,18 @@ async def start(Client, Message):
    user = await get_user(Client, Message)
    await Message.reply(f"User's Name: {user.first_name} \n User's ID: {user.id}")
 ```
+
+<h2> <code> get_user_reason() </code> </h2>
+<b> Info: </b> <i> Get user and reason/(extra) without any extra process! </i> <br>
+<b> usage: </b> 
+
+``` python 
+from RiZoeLX.funtions import get_user
+from pyrogram import Client, filters
+from pyrogram import Message
+
+@Client.on_message(filters.command("user"))
+async def start(Client, Message):
+   user, reason = await get_user_reason(Client, Message)
+   await Message.reply(f"User: {user.mention} \nReason: {str(reason)}")
+```
