@@ -12,9 +12,9 @@ from pyrogram import Message
 
 
 @Client.on_message(filters.command("promote"))
-async def promote_(client, message):
+async def promote_(Client, Message):
    """Syntax: /promote <user (user's ID or username)> <tag (optional)> """
-   await promote_user(client, message)
+   await promote_user(Client, Message)
 ```
 
 
