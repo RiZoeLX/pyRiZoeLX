@@ -13,3 +13,4 @@ async def ban_(client, message):
    await ban_user(client, message)
 ```
 
+<h3 align="center"> Functions available! </h3>
