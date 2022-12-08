@@ -1,4 +1,4 @@
-<h1> * pyRiZoeLX </h1>
+<h1> • pyRiZoeLX </h1>
 <h2 align='center'> Module Name: Users </h2>
 
 <h2> <code> get_user() </code> </h2>
