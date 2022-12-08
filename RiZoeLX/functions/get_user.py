@@ -1,7 +1,7 @@
 """ RiZoeLX 2022 © pyRiZoeLX """
 
 # Get user with reason
-async def user_and_reason(RiZoeL, message):
+async def get_user_reason(RiZoeL, message):
    args = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 2)
    if len(args) > 0:
       try:
@@ -28,7 +28,7 @@ async def user_and_reason(RiZoeL, message):
 
 
 #Get user only
-async def user_only(RiZoeL, message):
+async def get_user(RiZoeL, message):
    args = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 1)
    if args:
       try:
