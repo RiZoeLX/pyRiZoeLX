@@ -4,10 +4,10 @@
 
 import random
 from RiZoeLX.data import admin_tags
-from . import user_and_reason, user_only
+from . import get_user_reason, get_user
 
 async def ban_user(RiZoeL, message):
-   user, reason = await user_and_reason(RiZoeL, message)
+   user, reason = await get_user_reason(RiZoeL, message)
    if reason:
      try:
         await RiZoeL.ban_chat_member(message.chat.id, user.id)
@@ -22,7 +22,7 @@ async def ban_user(RiZoeL, message):
        await message.reply_text(str(eror))
 
 async def unban_user(RiZoeL, message):
-   user, reason = await user_and_reason(RiZoeL, message)
+   user, reason = await get_user_reason(RiZoeL, message)
    if reason:
      try:
        await RiZoeL.unban_chat_member(message.chat.id, user.id)
@@ -38,7 +38,7 @@ async def unban_user(RiZoeL, message):
 
 async def promote_user(RiZoeL, message):
   chat = message.chat.id
-  user, tag = await user_and_reason(RiZoeL, message)
+  user, tag = await get_user_reason(RiZoeL, message)
   if tag:
     admin_tag = tag
   else:
@@ -64,7 +64,7 @@ async def promote_user(RiZoeL, message):
 
 async def promote_user(RiZoeL, message):
   chat = message.chat.id
-  user = await user_only(RiZoeL, message)
+  user = await get_user(RiZoeL, message)
   try:
      await RiZoeL.promote_chat_member(chat.id, user.id,
             is_anonymous=False,
