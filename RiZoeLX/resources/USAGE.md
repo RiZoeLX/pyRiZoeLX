@@ -1,4 +1,4 @@
-<h2> RiZoeLX - pyRiZoeLX </h2>
+<h1> RiZoeLX - pyRiZoeLX </h1>
 
 <h4 align='center'> Import; </h4>
 
@@ -6,8 +6,8 @@
 from RiZoeLX.functions import <functions name>
 ```
 
-<h3> Functions info and usage; </h3> 
-<b> Name: </b> <code> get_user() </code> <br>
+<h2> Functions info and usage; </h2> 
+<h3> Name: </h3> <code> get_user() </code> <br>
 <b> Info: </b> <i> Get user without any extra process! </i> <br>
 <b> usage: </b> 
 
