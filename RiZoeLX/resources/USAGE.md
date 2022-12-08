@@ -7,7 +7,7 @@ from RiZoeLX.functions import <functions name>
 ```
 
 <h2> Functions info and usage; </h2> 
-<h3> Name: </h3> <code> get_user() </code> <br>
+<h3> <code> get_user() </code> </h3> <br>
 <b> Info: </b> <i> Get user without any extra process! </i> <br>
 <b> usage: </b> 
 
