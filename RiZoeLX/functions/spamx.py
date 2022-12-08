@@ -10,7 +10,7 @@ from . import delete_reply
 
 
 """ Get User with Reason! """
-async def get_user_reason(RiZoeL, message, Owner, Sudos):
+async def user_reason(RiZoeL, message, Owner, Sudos):
    args = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 2)
    if len(args) > 0:
       try:
@@ -46,7 +46,7 @@ async def get_user_reason(RiZoeL, message, Owner, Sudos):
 
    return user, reason
 
-async def get_user(RiZoeL, message, Owner, Sudos):
+async def user_only(RiZoeL, message, Owner, Sudos):
    args = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 1)
    if args:
       try:
