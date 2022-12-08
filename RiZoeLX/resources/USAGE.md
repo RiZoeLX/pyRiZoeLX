@@ -7,8 +7,8 @@ from RiZoeLX.functions import <functions name>
 ```
 
 <h3> Modules info and usage; </h3> 
-<b> Name: </b> ```python get_user() ```
-<b> Info: </b> <i> Get user without any extra process! </i>
+<b> Name: </b> <code> get_user() </code> <br>
+<b> Info: </b> <i> Get user without any extra process! </i> <br>
 <b> usage: </b> 
 
 ``` python 
