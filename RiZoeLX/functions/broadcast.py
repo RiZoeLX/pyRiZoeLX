@@ -1,9 +1,11 @@
+"""
+   © RiZoeLX
+   SpamX - 2022
+   Note: function is only for ID not for Bots!
+"""
 
-#  © RiZoeLX
-#  SpamX - 2022
-#  Note: function is only for ID not for Bots!
 
-async def broadcast_(RiZoeL, message)
+async def broadcast_(RiZoeL, message):
     ok = message.from_user.id
     txt = ' '.join(message.command[1:])
     if txt:
@@ -26,14 +28,3 @@ async def broadcast_(RiZoeL, message)
           except Exception as e:
               err += 1 
     return await RiZoeL.send_message(ok, f"**• Broadcast Done** ✅ \n\n Chats: {dn} \n Failed In {err} chats")
-
-broadcast_usage = """
- 
-from RiZoeLX.funtions import broadcast_
-from pyrogram import Client, filters
-from pyrogram import Message 
-  
-@Client.on_message(filters.command("broadcast"))
-async def broadcast(Client, Message):
-   await broadcast_(Client, message)
-"""
