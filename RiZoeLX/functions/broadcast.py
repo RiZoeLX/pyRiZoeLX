@@ -1,8 +1,7 @@
-"""
-  © RiZoeLX
-  SpamX - 2022
-  Note: function is only for ID not for Bots!
-"""
+
+#  © RiZoeLX
+#  SpamX - 2022
+#  Note: function is only for ID not for Bots!
 
 async def broadcast_(RiZoeL, message)
     ok = message.from_user.id
@@ -37,5 +36,4 @@ from pyrogram import Message
 @Client.on_message(filters.command("broadcast"))
 async def broadcast(Client, Message):
    await broadcast_(Client, message)
-
 """
