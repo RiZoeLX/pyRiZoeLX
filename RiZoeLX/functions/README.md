@@ -1,6 +1,7 @@
 <h2> pyRiZoeLX - RiZoeLX </h2>
 
 <h3> Example. </h3>
+
 ``` python
 from RiZoeLX.functions import ban_user
 from pyrogram import Client, filters 
