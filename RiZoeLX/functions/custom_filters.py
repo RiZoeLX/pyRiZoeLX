@@ -5,6 +5,9 @@ from pyrogram import filters
 def sudo_filter(Sudos, cmd: str):
    return filters.user(Sudos) & filters.command(cmd)
 
+def me_filter(cmd: str):
+   return filters.me & filters.command(cmd)
+
 def private_filter(cmd, str):
    return filters.private & filters.incoming & filters.command(cmd)
 
