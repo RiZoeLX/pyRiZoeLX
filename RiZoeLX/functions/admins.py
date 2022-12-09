@@ -21,7 +21,7 @@ async def ban_user(RiZoeL, message):
       await message.reply_text("I don't have enough rights to ban this user.")
       return 
    except UserNotParticipant:
-      await message.reply_text("How can I mute a user who is not a part of this chat?")
+      await message.reply_text("How can I ban a user who is not a part of this chat?")
       return 
    except RPCError as eror:
       await message.reply_text(str(eror))
@@ -41,10 +41,7 @@ async def unban_user(RiZoeL, message):
       return
    except RightForbidden:
       await message.reply_text("I don't have enough rights to ban this user.")
-      return 
-   except UserNotParticipant:
-      await message.reply_text("How can I mute a user who is not a part of this chat?")
-      return 
+      return  
    except RPCError as eror:
       await message.reply_text(str(eror))
       return 
@@ -82,7 +79,7 @@ async def promote_user(RiZoeL, message):
   except RightForbidden:
      await message.reply_text("I don't have enough rights to ban this user.")
   except UserNotParticipant:
-     await message.reply_text("How can I mute a user who is not a part of this chat?")
+     await message.reply_text("How can I promote a user who is not a part of this chat?")
   except RPCError as eror:
      await message.reply_text(str(eror))
 
@@ -107,7 +104,7 @@ async def promote_user(RiZoeL, message):
   except RightForbidden:
      await message.reply_text("I don't have enough rights to ban this user.")
   except UserNotParticipant:
-     await message.reply_text("How can I mute a user who is not a part of this chat?")
+     await message.reply_text("How can I demote a user who is not a part of this chat?")
   except RPCError as eror:
      await message.reply_text(str(eror))
 
@@ -130,6 +127,7 @@ async def mute_user(RiZoeL, message):
    except RPCError as eror:
       await message.reply_text(str(eror))
       return
+
    if reason:
       await message.reply_text(f"Muted {user.mention}! \nReason: {reason}")
    else:
@@ -144,13 +142,11 @@ async def unmute_user(RiZoeL, message):
       return
    except RightForbidden:
       await message.reply_text("I don't have enough rights to ban this user.")
-      return 
-   except UserNotParticipant:
-      await message.reply_text("How can I mute a user who is not a part of this chat?")
-      return 
+      return
    except RPCError as eror:
       await message.reply_text(str(eror))
       return
+
    if reason:
       await message.reply_text(f"Unuted {user.mention}! \nReason: {reason}")
    else:
