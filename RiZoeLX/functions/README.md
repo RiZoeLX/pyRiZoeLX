@@ -16,8 +16,8 @@ async def ban_(client, message):
 <h3 align="center"> Functions available! </h3>
 <b> Function name: </b><i>users</i><br>
 
-* <code>get_user()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/resources/USERS_USAGE.md#get_user)
-* <code>get_user_reason()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/resources/USERS_USAGE.md#get_user_reason)
-* <code>get_info()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/resources/USERS_USAGE.md#get_info)
-* <code>get_id()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/resources/USERS_USAGE.md#get_id)
+* <code>get_user()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/USES.md#get_user)
+* <code>get_user_reason()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/USER.md#get_user_reason)
+* <code>get_info()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/USERS.md#get_info)
+* <code>get_id()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/USER.md#get_id)
 
