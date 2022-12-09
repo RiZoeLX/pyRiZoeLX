@@ -30,3 +30,31 @@ async def start(Client, Message):
    user, reason = await get_user_reason(Client, Message)
    await Message.reply(f"User: {user.mention} \nReason: {str(reason)}")
 ```
+
+<h2><code>get_info()</code></h2>
+<b> Info: </b> <i> Get user's info (first name, last name, username, ID etc.) </i> <br>
+<b> usage: </b> 
+
+``` python 
+from RiZoeLX.funtions import get_info
+from pyrogram import Client, filters
+from pyrogram import Message
+
+@Client.on_message(filters.command("info"))
+async def start(Client, Message):
+   await get_info(Client, Message)
+```
+
+<h2><code>get_id()</code></h2>
+<b> Info: </b> <i> Get user's ID and Chat ID </i> <br>
+<b> usage: </b> 
+
+``` python 
+from RiZoeLX.funtions import get_id
+from pyrogram import Client, filters
+from pyrogram import Message
+
+@Client.on_message(filters.command("info"))
+async def start(Client, Message):
+   await get_id(Client, Message)
+```
