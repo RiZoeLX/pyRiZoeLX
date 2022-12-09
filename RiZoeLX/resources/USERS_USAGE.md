@@ -1,7 +1,7 @@
 <h1> • pyRiZoeLX </h1>
 <h2 align='center'> Module Name: Users </h2>
 
-<h2><code>get_user()</code></h2>
+<h3><code>get_user()</code></h3>
 <b> Info: </b> <i> Get user without any extra process! </i> <br>
 <b> usage: </b> 
 
@@ -16,7 +16,7 @@ async def start(Client, Message):
    await Message.reply(f"User's Name: {user.first_name} \n User's ID: {user.id}")
 ```
 
-<h2><code>get_user_reason()</code></h2>
+<h3><code>get_user_reason()</code></h3>
 <b> Info: </b> <i> Get user and reason/(extra) without any extra process! </i> <br>
 <b> usage: </b> 
 
@@ -31,7 +31,7 @@ async def start(Client, Message):
    await Message.reply(f"User: {user.mention} \nReason: {str(reason)}")
 ```
 
-<h2><code>get_info()</code></h2>
+<h3><code>get_info()</code></h3>
 <b> Info: </b> <i> Get user's info (first name, last name, username, ID etc.) </i> <br>
 <b> usage: </b> 
 
@@ -45,7 +45,7 @@ async def start(Client, Message):
    await get_info(Client, Message)
 ```
 
-<h2><code>get_id()</code></h2>
+<h3><code>get_id()</code></h3>
 <b> Info: </b> <i> Get user's ID and Chat ID </i> <br>
 <b> usage: </b> 
 
