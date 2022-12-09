@@ -11,7 +11,7 @@ from pyrogram import Client, filters
 from pyrogram import Message
 
 @Client.on_message(filters.command("user"))
-async def start(Client, Message):
+async def user_(Client, Message):
    user = await get_user(Client, Message)
    await Message.reply(f"User's Name: {user.first_name} \n User's ID: {user.id}")
 ```
@@ -26,7 +26,7 @@ from pyrogram import Client, filters
 from pyrogram import Message
 
 @Client.on_message(filters.command("user"))
-async def start(Client, Message):
+async def user_(Client, Message):
    user, reason = await get_user_reason(Client, Message)
    await Message.reply(f"User: {user.mention} \nReason: {str(reason)}")
 ```
@@ -41,7 +41,7 @@ from pyrogram import Client, filters
 from pyrogram import Message
 
 @Client.on_message(filters.command("info"))
-async def start(Client, Message):
+async def info_(Client, Message):
    await get_info(Client, Message)
 ```
 
@@ -54,7 +54,7 @@ from RiZoeLX.funtions import get_id
 from pyrogram import Client, filters
 from pyrogram import Message
 
-@Client.on_message(filters.command("info"))
-async def start(Client, Message):
+@Client.on_message(filters.command("id"))
+async def id_(Client, Message):
    await get_id(Client, Message)
 ```
