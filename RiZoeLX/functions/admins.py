@@ -4,14 +4,58 @@
 
 import random
 from RiZoeLX.data import admin_tags
-from . import get_user_reason, get_user
-
 #Errors
 from pyrogram.errors import (ChatAdminRequired, RightForbidden, RPCError, UserNotParticipant)
 
+async def ur(RiZoeL, message):
+   args = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 2)
+   if len(args) > 0:
+      try:
+         user = await RiZoeL.us(args[0])
+      except Exception as error:
+         await message.reply_text(str(error))
+         return
+      reason = args[1]
+      if not reason:
+         reason = None
+   elif message.reply_to_message:
+      try:
+         user = await RiZoeL.us(message.reply_to_message.from_user.id)
+      except Exception as error:
+         user = message.reply_to_message.from_user
+      reason = args[0]
+      if not reason:
+         reason = None
+   else:
+      await message.reply_text("You need to specify an user!")
+      return
+
+   return user, reason
+
+
+#Get user only
+async def u(RiZoeL, message):
+   args = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 1)
+   if args:
+      try:
+         user = await RiZoeL.us(args[0])
+      except Exception as error:
+         await message.reply_text(str(error))
+         return
+   elif message.reply_to_message:
+      try:
+         user = await RiZoeL.us(message.reply_to_message.from_user.id)
+      except Exception as error:
+         user = message.reply_to_message.from_user
+   else:
+      await message.reply_text("You need to specify an user!")
+      return
+
+   return user
+
 
 async def ban_user(RiZoeL, message):
-   user, reason = await get_user_reason(RiZoeL, message)
+   user, reason = ur(RiZoeL, message)
    try:
       await RiZoeL.ban_chat_member(message.chat.id, user.id)
    except ChatAdminRequired:
@@ -33,7 +77,7 @@ async def ban_user(RiZoeL, message):
       await message.reply_text(f"Banned {user.mention}!")
 
 async def unban_user(RiZoeL, message):
-   user, reason = await get_user_reason(RiZoeL, message)
+   user, reason = await ur(RiZoeL, message)
    try:
       await RiZoeL.unban_chat_member(message.chat.id, user.id)
    except ChatAdminRequired:
@@ -53,7 +97,7 @@ async def unban_user(RiZoeL, message):
 
 async def promote_user(RiZoeL, message):
   chat = message.chat.id
-  user, tag = await get_user_reason(RiZoeL, message)
+  user, tag = await ur(RiZoeL, message)
   if tag:
     admin_tag = tag
   else:
@@ -85,7 +129,7 @@ async def promote_user(RiZoeL, message):
 
 async def promote_user(RiZoeL, message):
   chat = message.chat.id
-  user = await get_user(RiZoeL, message)
+  user = await u(RiZoeL, message)
   try:
      await RiZoeL.promote_chat_member(chat.id, user.id,
             is_anonymous=False,
@@ -112,7 +156,7 @@ async def promote_user(RiZoeL, message):
 from pyrogram.types import ChatPermissions
 
 async def mute_user(RiZoeL, message):
-   user, reason = await get_user_reason(RiZoeL, message)
+   user, reason = await ur(RiZoeL, message)
    try:
       await RiZoeL.restrict_chat_member(message.chat.id, user.id, ChatPermissions())
    except ChatAdminRequired:
@@ -134,7 +178,7 @@ async def mute_user(RiZoeL, message):
       await message.reply_text(f"Muted {user.mention}!")
 
 async def unmute_user(RiZoeL, message):
-   user, reason = await get_user_reason(RiZoeL, message)
+   user, reason = await ur(RiZoeL, message)
    try:
       await message.chat.unban_member(user.id) 
    except ChatAdminRequired:
