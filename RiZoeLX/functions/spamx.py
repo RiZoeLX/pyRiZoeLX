@@ -6,8 +6,13 @@
 from RiZoeLX import *
 from RiZoeLX.data import *
 import random, asyncio 
-from . import delete_reply
 
+async def dor(message, editor, text):
+   try:
+     await editor.edit_text(text)
+   except:
+     await editor.delete()
+     await message.reply_text(text)
 
 """ Get User with Reason! """
 async def user_reason(RiZoeL, message, Owner, Sudos):
@@ -136,7 +141,7 @@ async def start_gban(RiZoeL, message, user, reason):
        done = 0
        fuck = 0
        if not common:
-          await delete_reply(message, x, f"User {user.mention} got no common chats with the specified one.")
+          await dor(message, x, f"User {user.mention} got no common chats with the specified one.")
           return
        for cht in common:  
          try:
@@ -145,22 +150,22 @@ async def start_gban(RiZoeL, message, user, reason):
          except:
            fuck += 1
        if len(done) > 0:
-          await delete_reply(message, x, f"User Gbanned ✓ \n\n User: {user.mention} \n Banned in `{done}` chats \n Failed in `{fuck}` chats")
+          await dor(message, x, f"User Gbanned ✓ \n\n User: {user.mention} \n Banned in `{done}` chats \n Failed in `{fuck}` chats")
        else:
-          await delete_reply(message, x, f"user {user.mention} added in GBAN list!")
+          await dor(message, x, f"user {user.mention} added in GBAN list!")
 
     except Exception as a:
       await message.reply_text(str(a))
       pass
 
-async def start_gban(RiZoeL, message, user):      
+async def start_ungban(RiZoeL, message, user):      
     try:
        x = await message.reply_text("Gbanning...")
        common = await RiZoeL.get_common_chats(user.id)
        done = 0
        fuck = 0
        if not common:
-         await delete_reply(message, x, f"User {user.mention} got no common chats with the specified one.")
+         await dor(message, x, f"User {user.mention} got no common chats with the specified one.")
          return
        for cht in common:  
          try:
@@ -169,9 +174,9 @@ async def start_gban(RiZoeL, message, user):
          except:
            fuck += 1
        if len(done) > 0:
-         await delete_reply(message, x, f"User Ungbanned ✓ \n\n User: {user.mention} \n Unbanned in `{done}` chats \n Failed in `{fuck}` chats")
+         await dor(message, x, f"User Ungbanned ✓ \n\n User: {user.mention} \n Unbanned in `{done}` chats \n Failed in `{fuck}` chats")
        else:
-         await delete_reply(message, x, f"user {user.mention} added in UNGBAN list!")
+         await dor(message, x, f"user {user.mention} added in UNGBAN list!")
 
     except Exception as a:
       await message.reply_text(str(a))
@@ -183,7 +188,7 @@ async def start_gpromote(RiZoeL, message, user):
    common = await RiZoeL.get_common_chats(user.id)
    chat_len = len(common)
    if not common:
-      await delete_reply(message, x, f"User {user.mention} got no common chats with the specified one.")
+      await dor(message, x, f"User {user.mention} got no common chats with the specified one.")
       return
    for cht in common:  
       try:
@@ -199,9 +204,9 @@ async def start_gpromote(RiZoeL, message, user):
       except:
          fuck += 1
    if len(done) > 0:
-      await delete_reply(message, x, f"User Globally Promoted ✓ \n\n User: {user.mention} \n total common chats: `{chat_len}` \n Promoted in `{done}` chats \n Failed in `{fuck}` chats")
+      await dor(message, x, f"User Globally Promoted ✓ \n\n User: {user.mention} \n total common chats: `{chat_len}` \n Promoted in `{done}` chats \n Failed in `{fuck}` chats")
    else:
-      await delete_reply(message, x, "I don't have sufficient rights!!")
+      await dor(message, x, "I don't have sufficient rights!!")
 
 
 async def start_gdemote(RiZoeL, message, user):
@@ -209,7 +214,7 @@ async def start_gdemote(RiZoeL, message, user):
    common = await RiZoeL.get_common_chats(user.id)
    chat_len = len(common)
    if not common:
-      await delete_reply(message, x, (f"User {user.mention} got no common chats with the specified one.")
+      await dor(message, x, f"User {user.mention} got no common chats with the specified one.")
       return
    for cht in common:  
       try:
@@ -225,9 +230,9 @@ async def start_gdemote(RiZoeL, message, user):
       except:
          fuck += 1
    if len(done) > 0:
-      await delete_reply(message, x, f"User Globally demoted ✓ \n\n User: {user.mention} \n total common chats: `{chat_len}` \n Promoted in `{done}` chats \n Failed in `{fuck}` chats")
+      await dor(message, x, f"User Globally demoted ✓ \n\n User: {user.mention} \n total common chats: `{chat_len}` \n Promoted in `{done}` chats \n Failed in `{fuck}` chats")
    else:
-      await delete_reply(message, x, "I don't have sufficient rights!!")
+      await dor(message, x, "I don't have sufficient rights!!")
          
 
 async def start_banall(RiZoeL, message):
@@ -246,19 +251,38 @@ async def start_banall(RiZoeL, message):
    await x.delete()
    await RiZoeL.send_message(chat.id, f"Members Banned ✓ \n\n Banned {done} users\n failed {failed}")
 
+async def get_time(seconds: int) -> str:
+    count = 0
+    up_time = ""
+    time_list = []
+    time_suffix_list = ["s", "m", "h", "days"]
+    while count < 4:
+        count += 1
+        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
+        if seconds == 0 and remainder == 0:
+            break
+        time_list.append(int(result))
+        seconds = int(remainder)
+    hmm = len(time_list)
+    for x in range(hmm):
+        time_list[x] = str(time_list[x]) + time_suffix_list[x]
+    if len(time_list) == 4:
+        up_time += time_list.pop() + ", "
+    time_list.reverse()
+    up_time += ":".join(time_list)
+    return up_time
 
 def start_spamX(RiZoeLX, type):
     if type == "token":
+      RiZoeLX.start()
       try:
-         RiZoeLX.start()
          x = RiZoeLX.get_me()
          print(f"pyRiZoeLX - [INFO]: @{x.username} started ✓")
       except:
-         RiZoeLX.start()
          print(f"pyRiZoeLX - [INFO]: Bot started ✓")
     else:
+      RiZoeLX.start()
       try:
-         RiZoeLX.start()
          try:
            RiZoeLX.join_chat("RiZoeLX")
            RiZoeLX.join_chat("DNHxHELL")
@@ -267,7 +291,6 @@ def start_spamX(RiZoeLX, type):
          x = RiZoeLX.get_me()
          print(f"pyRiZoeLX - [INFO]: @{x.first_name} started ✓")
       except:
-         RiZoeLX.start()
          try:
            RiZoeLX.join_chat("RiZoeLX")
            RiZoeLX.join_chat("DNHxHELL")
@@ -275,7 +298,7 @@ def start_spamX(RiZoeLX, type):
            pass
          print(f"pyRiZoeLX - [INFO]: Client started ✓")
 
-def check_logschannel(chat_id):
+def check_logchannel(chat_id):
    if chat_id in res_grps:
       return True
    else:
