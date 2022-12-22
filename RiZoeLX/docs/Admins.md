@@ -1,5 +1,5 @@
 <h1> • pyRiZoeLX </h1>
-<h2 align='center'> Module Name: Users </h2>
+<h2 align='center'> Module Name: Admins</h2>
 
 <h3><code>ban_user()</code></h3>
 <b> Info: </b> <i> Ban user from chat! </i> <br>
