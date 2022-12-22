@@ -42,3 +42,21 @@ async def ban_(client, message):
 * <code>group_filter()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Filters.md#group_filter)
 * <code>media_filter()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Filters.md#media_filter)
 
+----
+
+<b> Remaining Functions </b><br>
+
+* <code>broadcast_()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Extra.md#broadcast_)
+* <code>purge_()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Extra.md#purge_)
+* <code>srape()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Extra.md#srape)
+* <code>custom_welcome()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Extra.md#custom_welcome)
+* <code>makelist_()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Extra.md#makelist_)
+* <code>start_banall()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Extra.md#start_banall)
+
+----
+
+<b> Watchers </b><br>
+* <code>Red7_Watch()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Extra.md#Red7_Watch) `Pyrogram`
+* <code>Red7_Watch_telethon()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Extra.md#Red7_Watch_telethon) `Telethon`
+ 
+
