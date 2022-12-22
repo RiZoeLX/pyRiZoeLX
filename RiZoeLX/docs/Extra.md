@@ -104,7 +104,7 @@ async def TeamRed7(Client, Message):
 <b> Library: </b> Pyrogram
 
 ``` python 
-from RiZoeLX.funtions import Red7_Watch
+from RiZoeLX.funtions import Red7_Watch_telethon
 from .. import bot
 from telethon import events
 
