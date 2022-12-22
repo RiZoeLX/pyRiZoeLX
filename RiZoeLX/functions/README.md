@@ -32,3 +32,13 @@ async def ban_(client, message):
 * <code>mute_user()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Admins.md#mute_user)
 * <code>unmute_user()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Admins.md#unmute_user)
 
+----
+
+<b> Function name: </b><i>Filters</i><br>
+
+* <code>sudo_filter()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Filters.md#sudo_filter)
+* <code>me_filter()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Filters.md#me_filter)
+* <code>private_filter()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Filters.md#private_filter)
+* <code>group_filter()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Filters.md#group_filter)
+* <code>media_filter()</code> - For usage [click here.](https://github.com/RiZoeLX/pyRiZoeLX/blob/main/RiZoeLX/docs/Filters.md#media_filter)
+
