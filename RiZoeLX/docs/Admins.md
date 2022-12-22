@@ -24,7 +24,7 @@ from RiZoeLX.funtions import unban_user
 from pyrogram import Client, filters
 from pyrogram import Message
 
-@Client.on_message(filters.command("user"))
+@Client.on_message(filters.group & filters.command("unban"))
 async def unban_(Client, Message):
    await unban_user(Client, Message)
 ```
