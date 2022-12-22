@@ -58,7 +58,7 @@ async def demote_(Client, Message):
 ```
 
 <h3><code>mute_user()</code></h3>
-<b> Info: </b> <i> Demote user! </i> <br>
+<b> Info: </b> <i> Mute user! </i> <br>
 <b> usage: </b> 
 
 ``` python 
@@ -72,7 +72,7 @@ async def mute_(Client, Message):
 ```
 
 <h3><code>unmute_user()</code></h3>
-<b> Info: </b> <i> Demote user! </i> <br>
+<b> Info: </b> <i> Unmute user! </i> <br>
 <b> usage: </b> 
 
 ``` python 
