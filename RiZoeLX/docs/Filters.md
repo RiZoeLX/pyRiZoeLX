@@ -17,6 +17,7 @@ async def Sudo_():
 ```
 
 <h3><code>me_filter()</code></h3>
+<b> Info: </b> <i> Defined Self filter! </i> <br>
 <b> usage: </b> 
 
 ``` python 
@@ -29,6 +30,7 @@ async def me_():
 ```
 
 <h3><code>private_filter()</code></h3>
+<b> Info: </b> <i> Defined private/incoming filter! </i> <br>
 <b> usage: </b> 
 
 ``` python 
@@ -41,6 +43,7 @@ async def private_():
 ```
 
 <h3><code>group_filter()</code></h3>
+<b> Info: </b> <i> Defined Group filter! </i> <br>
 <b> usage: </b> 
 
 ``` python 
@@ -53,6 +56,7 @@ async def group_():
 ```
 
 <h3><code>media_filter()</code></h3>
+<b> Info: </b> <i> Defined filter! fir trigger Media such as Photo, video etc. </i> <br>
 <b> usage: </b> 
 
 ``` python 
