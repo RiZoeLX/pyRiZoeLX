@@ -4,5 +4,7 @@
 
 <h4> Installation </h4>
 
-```python pip3 install pyRiZoeLX```
+```python 
+pip3 install pyRiZoeLX
+```
 
