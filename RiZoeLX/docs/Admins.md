@@ -8,7 +8,7 @@
 ``` python 
 from RiZoeLX.funtions import ban_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("ban"))
 async def ban_(Client, Message):
@@ -22,7 +22,7 @@ async def ban_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import unban_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("unban"))
 async def unban_(Client, Message):
@@ -36,7 +36,7 @@ async def unban_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import promote_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("promote"))
 async def promote_(Client, Message):
@@ -50,7 +50,7 @@ async def promote_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import demote_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("demote"))
 async def demote_(Client, Message):
@@ -64,7 +64,7 @@ async def demote_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import mute_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("mute"))
 async def mute_(Client, Message):
@@ -78,7 +78,7 @@ async def mute_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import unmute_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("unmute"))
 async def unmute_(Client, Message):
