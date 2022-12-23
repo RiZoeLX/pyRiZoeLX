@@ -17,7 +17,6 @@ from RiZoeLX.functions import <functions name>
 
 <b> Functions available: [Click Here](https://github.com/RiZoeLX/pyRiZoeLX/tree/main/RiZoeLX/functions#-functions-available-) </b>
 
-[![CodeFactor](https://www.codefactor.io/repository/github/RiZoeLX/pyRiZoeLX/badge)](https://www.codefactor.io/repository/github/RiZoeLX/pyRiZoeLX)
 [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)    
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/py-Ultroid?label=DOWNLOADS&style=round)](https://pypi.org/project/pyRiZoeLX)    
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/RiZoeLX/pyRiZoeLX/graphs/commit-activity)
