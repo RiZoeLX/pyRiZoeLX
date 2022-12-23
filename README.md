@@ -8,3 +8,8 @@
 pip3 install pyRiZoeLX
 ```
 
+<h4> Import functions </h4>
+
+``` python
+from RiZoeLX.functions import <functions name>
+```
