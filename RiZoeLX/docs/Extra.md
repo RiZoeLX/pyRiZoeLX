@@ -8,7 +8,7 @@
 ``` python 
 from RiZoeLX.funtions import broadcast_
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.command("broadcast"))
 async def broadcast(Client, Message):
@@ -21,7 +21,7 @@ async def broadcast(Client, Message):
 ``` python 
 from RiZoeLX.funtions import purge_
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("purge"))
 async def purge(Client, Message):
@@ -35,7 +35,7 @@ async def purge(Client, Message):
 ``` python 
 from RiZoeLX.funtions import srape
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("scrape"))
 async def sraper_(Client, Message):
@@ -51,7 +51,7 @@ async def sraper_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import custom_welcome
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.new_chat_members)
 async def _welcome(Client, Message):
@@ -77,7 +77,7 @@ Users = makelist_(ids)
 ``` python 
 from RiZoeLX.funtions import start_banall
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.group & filters.command("banall"))
 async def banall_members(Client, Message):
@@ -93,7 +93,7 @@ async def banall_members(Client, Message):
 ``` python 
 from RiZoeLX.funtions import Red7_Watch
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.all)
 async def TeamRed7(Client, Message):
