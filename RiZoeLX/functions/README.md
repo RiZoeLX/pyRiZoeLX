@@ -5,7 +5,7 @@
 ``` python
 from RiZoeLX.functions import ban_user
 from pyrogram import Client, filters 
-from pyrogram import Message
+from pyrogram.types import Message
 
 
 @Client.on_message(filters.command("ban"))
