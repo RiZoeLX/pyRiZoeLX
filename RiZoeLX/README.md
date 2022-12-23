@@ -8,7 +8,7 @@ pyRiZoeLX is pyrogram based pip module for smooth functioning of telegram bots
 ``` python
 from RiZoeLX.functions import promote_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 
 @Client.on_message(filters.command("promote"))
