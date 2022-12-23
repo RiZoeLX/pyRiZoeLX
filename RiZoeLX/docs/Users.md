@@ -8,7 +8,7 @@
 ``` python 
 from RiZoeLX.funtions import get_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.command("user"))
 async def user_(Client, Message):
@@ -23,7 +23,7 @@ async def user_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import get_user
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.command("user"))
 async def user_(Client, Message):
@@ -38,7 +38,7 @@ async def user_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import get_info
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.command("info"))
 async def info_(Client, Message):
@@ -52,7 +52,7 @@ async def info_(Client, Message):
 ``` python 
 from RiZoeLX.funtions import get_id
 from pyrogram import Client, filters
-from pyrogram import Message
+from pyrogram.types import Message
 
 @Client.on_message(filters.command("id"))
 async def id_(Client, Message):
