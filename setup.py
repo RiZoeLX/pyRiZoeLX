@@ -11,7 +11,7 @@ if not version:
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-requirements = ['pyrogram', 'telethon']
+requirements = ['pyrogram', 'telethon', 'py-tgcalls']
 
 setup(
     name='pyRiZoeLX',
