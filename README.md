@@ -1,8 +1,8 @@
 <p align="center">
     <a href="https://github.com/RiZoeLX">
-        <img src="https://github.com/RiZoeLX/pyRiZoeLX/raw/main/RiZoeLX/data/RiZoeLX.png" alt="tgcalls">
+        <img src="RiZoeLX/data/RiZoeLX.png" alt="RiZoeLX">
     </a>
-    <b>Voice chats, private incoming and outgoing calls in Telegram for Developers</b>
+    <b aligne='right'>RiZoeL X</b>
 
 <h1 aligne='center'> pyRiZoeLX </h1>
 
