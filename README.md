@@ -1,7 +1,7 @@
 <p align="left">
     <a href="https://github.com/RiZoeLX">
         <img src="RiZoeLX/data/RiZoeLX.png" alt="RiZoeLX" width="150">
-    </a> <b aligne='right'> RiZoeLX </b>
+    </a> <h1 aligne='right'> RiZoeLX </h1>
 </p>
 
 <h1 aligne='right'> pyRiZoeLX </h1>
