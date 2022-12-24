@@ -1,10 +1,10 @@
 <p align="left">
     <a href="https://github.com/RiZoeLX">
         <img src="RiZoeLX/data/RiZoeLX.png" alt="RiZoeLX" width="150">
-    </a>
+    </a> <b aligne='right'> RiZoeLX </b>
+</p>
 
 <h1 aligne='right'> pyRiZoeLX </h1>
-</p>
 
 <b> About:</b> pyRiZoeLX have many useful functions, that you can use in your repos/repostory. It'll make you code/bot smooth and fast!
 
