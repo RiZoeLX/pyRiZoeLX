@@ -3,8 +3,7 @@
       <img src="RiZoeLX/data/RiZoeLX.png" alt="RiZoeLX" width="300" aligne='centre'>
    </a>
 </p>
-
-<h1 aligne="center">
+<h1 align="center">
    <b> pyRiZoeLX </b>
 </h1>
 
