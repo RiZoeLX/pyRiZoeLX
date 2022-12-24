@@ -1,3 +1,10 @@
+<p align="center">
+    <a href="https://github.com/RiZoeLX">
+        <img src="https://github.com/RiZoeLX/pyRiZoeLX/raw/main/RiZoeLX/data/RiZoeLX.png" alt="tgcalls">
+    </a>
+    <br>
+    <b>Voice chats, private incoming and outgoing calls in Telegram for Developers</b>
+
 <h1 aligne='center'> pyRiZoeLX </h1>
 
 <b> About:</b> pyRiZoeLX have many useful functions, that you can use in your repos/repostory. It'll make you code/bot smooth and fast!
