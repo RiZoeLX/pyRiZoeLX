@@ -1,13 +1,9 @@
 
 <h1 aligne='right'> pyRiZoeLX </h1>
 
-<p align="right">
-    <a href="https://github.com/RiZoeLX">
-        <img src="RiZoeLX/data/RiZoeLX.png" alt="RiZoeLX" width="200">
-    </a>
-</p>
-
-<b> About:</b> pyRiZoeLX have many useful functions, that you can use in your repos/repostory. It'll make you code/bot smooth and fast! 
+<a href="https://github.com/RiZoeLX">
+   <img src="RiZoeLX/data/RiZoeLX.png" alt="RiZoeLX" width="200">
+</a> <p align="left"> pyRiZoeLX have many useful functions, that you can use in your repos/repostory. It'll make you code/bot smooth and fast! </p>
 
 <h4> Installation </h4>
 
