@@ -25,11 +25,6 @@ from RiZoeLX.functions import <functions name>
 
 <b> Functions available: [Click Here](https://github.com/RiZoeLX/pyRiZoeLX/tree/main/RiZoeLX/functions#-functions-available-) </b>
 
-• [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)    
-• [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyRiZoeLX?label=DOWNLOADS&style=round)](https://pypi.org/project/pyRiZoeLX)    
-
-----
-
 <h3> Example. </h3>
 
 ``` python
@@ -42,3 +37,9 @@ from pyrogram.types import Message
 async def ban_(client, message):
    await ban_user(client, message)
 ```
+
+----
+
+
+• [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)    
+• [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyRiZoeLX?label=DOWNLOADS&style=round)](https://pypi.org/project/pyRiZoeLX)    
