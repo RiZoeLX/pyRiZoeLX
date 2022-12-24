@@ -7,6 +7,8 @@
    <b> pyRiZoeLX </b>
 </h1>
 
+----
+
 <b>About:</b> pyRiZoeLX have many useful functions, that you can use in your repos/repostory. It'll make you code/bot smooth and fast!
 
 <h4> Installation </h4>
@@ -20,7 +22,6 @@ pip3 install pyRiZoeLX
 ``` python
 from RiZoeLX.functions import <functions name>
 ```
-<br>
 
 <b> Functions available: [Click Here](https://github.com/RiZoeLX/pyRiZoeLX/tree/main/RiZoeLX/functions#-functions-available-) </b>
 
@@ -28,7 +29,6 @@ from RiZoeLX.functions import <functions name>
 • [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyRiZoeLX?label=DOWNLOADS&style=round)](https://pypi.org/project/pyRiZoeLX)    
 
 ----
-
 
 <h3> Example. </h3>
 
