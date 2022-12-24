@@ -22,9 +22,9 @@ pip3 install pyRiZoeLX
 ``` python
 from RiZoeLX.functions import <functions name>
 ```
-
+<br>
 <b> Functions available: [Click Here](https://github.com/RiZoeLX/pyRiZoeLX/tree/main/RiZoeLX/functions#-functions-available-) </b>
-
+<br>
 <h3> Example. </h3>
 
 ``` python
