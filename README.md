@@ -26,3 +26,19 @@ from RiZoeLX.functions import <functions name>
 
 • [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)    
 • [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyRiZoeLX?label=DOWNLOADS&style=round)](https://pypi.org/project/pyRiZoeLX)    
+
+----
+
+
+<h3> Example. </h3>
+
+``` python
+from RiZoeLX.functions import ban_user
+from pyrogram import Client, filters 
+from pyrogram.types import Message
+
+
+@Client.on_message(filters.command("ban"))
+async def ban_(client, message):
+   await ban_user(client, message)
+```
