@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
     <a href="https://github.com/RiZoeLX">
         <img src="RiZoeLX/data/RiZoeLX.png" alt="RiZoeLX">
     </a>
