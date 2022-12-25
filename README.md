@@ -4,7 +4,7 @@
    </a>
 </p>
 <h1 align="center">
-   <b> pyRiZoeLX </b>   
+   <b> pyRiZoeLX </b> <br>  
     [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)
 
 </h1>
