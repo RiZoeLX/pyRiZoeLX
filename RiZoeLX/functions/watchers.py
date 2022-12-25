@@ -100,7 +100,7 @@ Appeal [Here](https://t.me/Red7WatchSupport)
                 await RiZoeL(functions.channels.EditBannedRequest(message.chat_id, user, BANNED_RIGHTS))
             except BaseException:
                 pass
-           await RiZoeL.send_message(message.chat_id, msg, link_preview=False)
+            await RiZoeL.send_message(message.chat_id, msg, link_preview=False)
    except Exception as error:
       print(str(error))
 
