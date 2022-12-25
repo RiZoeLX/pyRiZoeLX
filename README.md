@@ -45,3 +45,12 @@ async def ban_(client, message):
 
 • [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)    
 • [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyRiZoeLX?label=DOWNLOADS&style=round)](https://pypi.org/project/pyRiZoeLX)    
+
+
+$ pip list
+Package                  Version    
+------------------------ ---------- 
+twine                    1.13.0
+setuptools               41.0.1
+wheel                    0.33.4
+...
