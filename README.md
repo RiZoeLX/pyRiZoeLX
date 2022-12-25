@@ -8,7 +8,7 @@
 
 </h1>
 
- • [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)
+ * [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)
 
 ----
 
