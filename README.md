@@ -4,7 +4,9 @@
    </a>
 </p>
 <h1 align="center">
-   <b> pyRiZoeLX </b>
+   <b> pyRiZoeLX </b>   
+    [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)
+
 </h1>
 
 ----
@@ -39,10 +41,3 @@ from pyrogram.types import Message
 async def ban_(client, message):
    await ban_user(client, message)
 ```
-
-----
-
-
-• [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX)    
-• [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyRiZoeLX?label=DOWNLOADS&style=round)](https://pypi.org/project/pyRiZoeLX)    
-
