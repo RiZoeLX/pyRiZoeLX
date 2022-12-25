@@ -3,7 +3,7 @@ from .get_info import *
 from .get_user import *
 from .list import *
 from .scraper import *
-from .spamx import * 
+#from .spamx import * 
 from .purges import *
 from .welcome_message import *
 #from .voicechat import *
