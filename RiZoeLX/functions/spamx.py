@@ -259,7 +259,7 @@ async def start_gdemote(RiZoeL, message, user):
 
 async def start_banall(RiZoeL, message):
    chat = message.chat
-   x = RiZoeL.send_message("Hey it's SpamX!")
+   x = RiZoeL.send_message(chat.id, "Hey it's SpamX!")
    done = 0
    failed = 0
    async for u in RiZoeL.get_chat_members(chat.id):
