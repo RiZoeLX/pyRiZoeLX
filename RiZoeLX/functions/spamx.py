@@ -305,19 +305,14 @@ def start_spamX(RiZoeLX, type):
     else:
       RiZoeLX.start()
       try:
-         try:
-           RiZoeLX.join_chat("RiZoeLX")
-           RiZoeLX.join_chat("DNHxHELL")
-         except:
-           pass
+         RiZoeLX.join_chat("RiZoeLX")
+         RiZoeLX.join_chat("DNHxHELL")
+      except:
+         pass
+      try:
          x = RiZoeLX.get_me()
          print(f"pyRiZoeLX - [INFO]: @{x.first_name} started ✓")
       except:
-         try:
-           RiZoeLX.join_chat("RiZoeLX")
-           RiZoeLX.join_chat("DNHxHELL")
-         except:
-           pass
          print(f"pyRiZoeLX - [INFO]: Client started ✓")
 
 def check_logchannel(chat_id):
