@@ -15,7 +15,7 @@ except Exception as error:
     readme_contents = ""
     sys.stderr.write( "Warning: Could not open README.md due %s\n" % error )
     
-requirements = ['pyrogram', 'telethon', 'py-tgcalls', 'PhoenixScanner']
+requirements = ['pyrogram', 'telethon', 'PhoenixScanner']
 
 setup(
     name='pyRiZoeLX',
