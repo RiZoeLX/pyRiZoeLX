@@ -47,5 +47,4 @@ setup(
     include_package_data=True,
     keywords=['telegram', 'pyRiZoeLX', 'RiZoeLX', 'pyrogram', 'functions', 'py-RiZoeLX'],
     install_requires=requirements,
-    python_requires=">3.7, <3.11",
 )
