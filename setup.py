@@ -26,7 +26,7 @@ setup(
     long_description = readme_contents,
     long_description_content_type='text/markdown',
     url='https://github.com/RiZoeLX/pyRiZoeLX',
-    packages=find_packages()
+    packages=find_packages(),
     license='GNU General Public License v3.0',
     classifiers=[
         "Framework :: AsyncIO",
