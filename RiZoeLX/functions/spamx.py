@@ -122,7 +122,7 @@ async def start_spam(RiZoeL, message, counts, spam_text):
       await message.reply_text("**Error!**")
       return
    for _ in range(counts):
-      await RiZoeL.send_message(chat.id, f"{spam_text} \n\n #{message.from_user.first_name} \n #SpamX -")
+      await RiZoeL.send_message(chat.id, str(spam_text))
       await asyncio.sleep(0.3)
 
 async def start_dm_raid(RiZoeL, message, counts, user):
@@ -151,7 +151,7 @@ async def start_dspam(RiZoeL, message, counts, delay, spam_text):
       await message.reply_text("**Error!**")
       return
    for _ in range(counts):
-      await RiZoeL.send_message(chat.id, f"{spam_text} \n\n #{message.from_user.first_name} \n #SpamX -")
+      await RiZoeL.send_message(chat.id, str(spam_text))
       await asyncio.sleep(delay)
 
 async def start_pspam(RiZoeL, message, counts):
