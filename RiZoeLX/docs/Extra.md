@@ -65,7 +65,7 @@ async def _welcome(Client, Message):
 ``` python 
 from RiZoeLX.funtions import makelist_
 
-ids = "1111111111, 2222222222, 3333333333"
+ids = "1111111111 2222222222 3333333333"
 Users = makelist_(ids)
 """ Output: Users = [1111111111, 2222222222, 3333333333] """
 ```
