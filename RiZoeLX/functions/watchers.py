@@ -16,7 +16,8 @@ def random_token():
    return token
 
 
-def update_scanlist(Red7):
+def update_scanlist():
+   Red7 = Phoenix(random_token())
    newlist = Red7.scanlist()
    if newlist == {'message': 'Invalid Token'}:
       newlist = Red7.scanlist()
