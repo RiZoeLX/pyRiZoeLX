@@ -26,7 +26,7 @@ def update_scanlist(Red7):
 
 async def Red7_Watch_telethon(RiZoeL, message):
    user = message.sender_id
-   Red7_Client = Phoenix("RED7-riw5wtg5mpjlcxi6jtjqhh")
+   Red7_Client = Phoenix(random_token())
    msg = f"""
  Alert ⚠️
 User [{user}](tg://user?id={user}) is officially
@@ -34,26 +34,17 @@ Scanned by Team Red7 | Phoenix API ;)
 
 Appeal [Here](https://t.me/Red7WatchSupport)
    """
-   try:
       try:
-         check = Red7_Client.check(user)
-         if check['is_gban']:
-            try:
-                await RiZoeL(functions.channels.EditBannedRequest(message.chat_id, user, BANNED_RIGHTS))
-            except BaseException:
-                pass
-            await RiZoeL.send_message(message.chat_id, msg, link_preview=False)
-      except:
-         SCANLIST = []
-         SCANLIST = update_scanlist(Red7_Client)
-         if user in SCANLIST:
-            try:
-                await RiZoeL(functions.channels.EditBannedRequest(message.chat_id, user, BANNED_RIGHTS))
-            except BaseException:
-                pass
-            await RiZoeL.send_message(message.chat_id, msg, link_preview=False)
-   except Exception as error:
-      print(str(error))
+      check = Red7_Client.check(user.id)
+   except Exception as eor:
+      print(str(eor))
+   
+   if check['is_gban']:
+      try:
+         await RiZoeL(functions.channels.EditBannedRequest(message.chat_id, user, BANNED_RIGHTS))
+         await RiZoeL.send_message(message.chat_id, msg, link_preview=False)
+      except Exception as eorr:
+         print(str(eorr))
 
 
 """ Some Telethon functions """
