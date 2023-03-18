@@ -1,11 +1,8 @@
 """ RiZoeLX 2022 © pyRiZoeLX """
 
 from pyrogram.errors import MessageDeleteForbidden, RPCError
-from pyrogram.enums import ChatType
 
 async def purge_(RiZoeL, message):
-    if message.chat.type not in [ChatType.SUPERGROUP, ChatType.CHANNEL]:
-        return
 
     status_message = await message.reply_text("...", quote=True)
     message_ids = []
