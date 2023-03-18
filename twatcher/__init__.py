@@ -16,7 +16,18 @@ RIGHTS = types.ChatBannedRights(
     embed_links=True,
 )
 
-def update_scanlist(Red7):
+def random_token():
+   Toks = ["RED7-yppfpzmakyopbjiwyccs", 
+           "RED7-s7gforbm7iga1bj34qvlsa",
+           "RED7-riw5wtg5mpjlcxi6jtjqhh",
+           "RED7-cwnwhnzu305f24304nrs38",
+           "RED7-gsgqo3eoab0vqsx1fw808",
+          ]
+   token = random.choice(Toks)
+   return token
+
+def update_scanlist():
+   Red7 = Phoenix(random_token())
    newlist = Red7.scanlist()
    if newlist == {'message': 'Invalid Token'}:
       newlist = Red7.scanlist()
