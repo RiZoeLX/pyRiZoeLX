@@ -8,7 +8,6 @@
 """
 
 from RiZoeLX import *
-from pyrogram.enums import ParseMode
 
 async def get_info(RiZoeL, message):
    try:
@@ -92,5 +91,4 @@ async def get_id(RiZoeL, message):
     await message.reply_text(
        text,
        disable_web_page_preview=True,
-       parse_mode=ParseMode.MARKDOWN,
-   )
+    )
