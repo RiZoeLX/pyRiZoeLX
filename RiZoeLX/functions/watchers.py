@@ -15,9 +15,7 @@ def random_token():
    token = random.choice(Toks)
    return token
 
-
-def update_scanlist():
-   Red7 = Phoenix(random_token())
+def update_scanlist(Red7):
    newlist = Red7.scanlist()
    if newlist == {'message': 'Invalid Token'}:
       newlist = Red7.scanlist()
@@ -27,63 +25,42 @@ def update_scanlist():
 
 
 # [Pyrogram]
-async def Red7_Watch(RiZoeL, message):
+async def Red7_Watch(RiZoeL, member):
    Red7_Client = Phoenix(random_token())
-   user = message.from_user
+   if (
+        member.new_chat_member
+        and member.new_chat_member.status
+        and not member.old_chat_member
+   ):
+        pass
+   else:
+        return
+   
+   user = member.new_chat_member.user if member.new_chat_member else member.from_user   
    msg = f"""
 ** Alert ⚠️**
 User {user.mention} is officially
 Scanned by Team Red7 | Phoenix API ;)
-
 Appeal [Here](https://t.me/Red7WatchSupport)
    """
    try:
-      check = Red7_Client.check(user.id)
-   except Exception as eor:
-      print(str(eor))
-   
-   if check['is_gban']:
       try:
-         await RiZoeL.ban_chat_member(message.chat.id, user.id)
-         await RiZoeL.send_message(message.chat.id, msg, disable_web_page_preview=True)
-      except Exception as eorr:
-         print(str(eorr))
-
-
-# [Telethon]
-from telethon.tl import types, functions
-
-RIGHTS = types.ChatBannedRights(
-    until_date=None,
-    view_messages=True,
-    send_messages=True,
-    send_media=True,
-    send_stickers=True,
-    send_gifs=True,
-    send_games=True,
-    send_inline=True,
-    embed_links=True,
-)
-
-async def Red7_Watch_telethon(RiZoeL, message):
-   user = message.sender_id
-   Red7_Client = Phoenix(random_token())
-   msg = f"""
- Alert ⚠️
-User [{user}](tg://user?id={user}) is officially
-Scanned by Team Red7 | Phoenix API ;)
-
-Appeal [Here](https://t.me/Red7WatchSupport)
-   """
-   try:
-      check = Red7_Client.check(user.id)
-   except Exception as eor:
-      print(str(eor))
-   
-   if check['is_gban']:
-      try:
-         await RiZoeL(functions.channels.EditBannedRequest(message.chat_id, user, BANNED_RIGHTS))
-         await RiZoeL.send_message(message.chat_id, msg, link_preview=False)
-      except Exception as eorr:
-         print(str(eorr))
+         check = Red7_Client.check(user.id)
+         if check['is_gban']:
+            try:
+               await RiZoeL.ban_chat_member(message.chat.id, user.id)
+               await RiZoeL.send_message(message.chat.id, msg, disable_web_page_preview=True)
+            except Exception:
+               return          
+      except:
+         SCANLIST = []
+         SCANLIST = update_scanlist(Red7_Client)
+         if user.id in SCANLIST:
+            try:
+               await RiZoeL.ban_chat_member(message.chat.id, user.id)
+               await RiZoeL.send_message(message.chat.id, msg, disable_web_page_preview=True)
+            except Exception:
+               return           
+   except Exception as error:
+      print(str(error))
 
