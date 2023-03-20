@@ -36,26 +36,21 @@ def update_scanlist():
    return newlist
 
 async def Red7_Watch_telethon(RiZoeL, message):
-   user = message.sender_id
-   Red7_Client = Phoenix(random_token())
-   msg = f"""
- Alert ⚠️
-User [{user}](tg://user?id={user}) is officially
+   if message.user_joined or message.added_by:
+     user_id = message.sender_id
+     msg = f"""
+** Alert ⚠️**
+User [{user_id}](tg://user?id={user_id}) is officially
 Scanned by Team Red7 | Phoenix API ;)
-
 Appeal [Here](https://t.me/Red7WatchSupport)
-   """
-      try:
-      check = Red7_Client.check(user.id)
-   except Exception as eor:
-      print(str(eor))
-   
-   if check['is_gban']:
-      try:
-         await RiZoeL(functions.channels.EditBannedRequest(message.chat_id, user, BANNED_RIGHTS))
-         await RiZoeL.send_message(message.chat_id, msg, link_preview=False)
-      except Exception as eorr:
-         print(str(eorr))
+     """
+     SCANLIST = update_scanlist()
+     if user_id in SCANLIST:
+       try:
+          await RiZoeL(functions.channels.EditBannedRequest(message.chat_id, user_id, BANNED_RIGHTS))
+          await RiZoeL.send_message(message.chat_id, msg, link_preview=False)
+       except Exception as eorr:
+          print(str(eorr))
 
 
 """ Some Telethon functions """
