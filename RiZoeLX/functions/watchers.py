@@ -48,8 +48,8 @@ Appeal [Here](https://t.me/Red7WatchSupport)
          check = Red7_Client.check(user.id)
          if check['is_gban']:
             try:
-               await RiZoeL.ban_chat_member(message.chat.id, user.id)
-               await RiZoeL.send_message(message.chat.id, msg, disable_web_page_preview=True)
+               await RiZoeL.ban_chat_member(member.chat.id, user.id)
+               await RiZoeL.send_message(member.chat.id, msg, disable_web_page_preview=True)
             except Exception:
                return          
       except:
@@ -57,8 +57,8 @@ Appeal [Here](https://t.me/Red7WatchSupport)
          SCANLIST = update_scanlist(Red7_Client)
          if user.id in SCANLIST:
             try:
-               await RiZoeL.ban_chat_member(message.chat.id, user.id)
-               await RiZoeL.send_message(message.chat.id, msg, disable_web_page_preview=True)
+               await RiZoeL.ban_chat_member(member.chat.id, user.id)
+               await RiZoeL.send_message(member.chat.id, msg, disable_web_page_preview=True)
             except Exception:
                return           
    except Exception as error:
