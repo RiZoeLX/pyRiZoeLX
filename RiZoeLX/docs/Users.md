@@ -6,7 +6,7 @@
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import get_user
+from RiZoeLX.functions import get_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -21,7 +21,7 @@ async def user_(Client, Message):
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import get_user
+from RiZoeLX.functions import get_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -36,7 +36,7 @@ async def user_(Client, Message):
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import get_info
+from RiZoeLX.functions import get_info
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -50,7 +50,7 @@ async def info_(Client, Message):
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import get_id
+from RiZoeLX.functions import get_id
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
