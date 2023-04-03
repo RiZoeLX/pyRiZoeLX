@@ -20,7 +20,7 @@ async def ban_(Client, Message):
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import unban_user
+from RiZoeLX.functions import unban_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -34,7 +34,7 @@ async def unban_(Client, Message):
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import promote_user
+from RiZoeLX.functions import promote_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -48,7 +48,7 @@ async def promote_(Client, Message):
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import demote_user
+from RiZoeLX.functions import demote_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -62,7 +62,7 @@ async def demote_(Client, Message):
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import mute_user
+from RiZoeLX.functions import mute_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -76,7 +76,7 @@ async def mute_(Client, Message):
 <b> usage: </b> 
 
 ``` python 
-from RiZoeLX.funtions import unmute_user
+from RiZoeLX.functions import unmute_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
